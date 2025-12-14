@@ -62,12 +62,12 @@ jobs:
 
       #     kubectl rollout status deployment/deployment-1
 
-      # Deploy the Docker image to the GKE cluster
-      # - name: 'Deploy to GKE'
-      #   run: |-
-      #     kubectl apply -f k8s/deployment.yaml
-      #     kubectl apply -f k8s/service.yaml
-      #     kubectl apply -f k8s/hpa.yaml
+      #Deploy the Docker image to the GKE cluster
+      - name: 'Deploy to GKE'
+        run: |-
+          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f k8s/service.yaml
+          kubectl apply -f k8s/hpa.yaml
 
-      #     kubectl rollout status deployment demo-log-ml-service
-      #     kubectl get services -o wide
+          kubectl rollout status deployment demo-log-ml-service
+          kubectl get services -o wide
